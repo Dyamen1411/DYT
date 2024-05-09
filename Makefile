@@ -19,10 +19,10 @@ OBJ_DIR	:=	build
 
 CC			=	cc
 CFLAGS		=	-Wall -Werror -Wextra -g
-LFLAGS		=	
+LFLAGS		=	-lglfw
 
-FILES		=				\
-	main
+FILES		=	\
+	main window/create window/destroy window/should_close window/update
 
 SRCS		=	$(addprefix $(SRC_DIR)/, $(addsuffix .c,$(FILES)))
 OBJS		=	$(addprefix $(OBJ_DIR)/, $(addsuffix .o,$(FILES)))
