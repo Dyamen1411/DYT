@@ -5,7 +5,7 @@
 #    By: Antoine Massias <massias.antoine.pro@gmail.com>                       #
 #                                                                              #
 #    Created: 2024/05/09 15:19:22 by Antoine Massias                           #
-#    Updated: 2024/05/09 15:21:50 by Antoine Massias                           #
+#    Updated: 2024/05/09 18:02:10 by Antoine Massias                           #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ CFLAGS		=	-Wall -Werror -Wextra -g
 LFLAGS		=	-lglfw
 
 FILES		=	\
-	main window/create window/destroy window/should_close window/update
+	main dyt/get_shell_path window/create window/destroy	\
+	window/should_close window/update						\
 
 SRCS		=	$(addprefix $(SRC_DIR)/, $(addsuffix .c,$(FILES)))
 OBJS		=	$(addprefix $(OBJ_DIR)/, $(addsuffix .o,$(FILES)))
