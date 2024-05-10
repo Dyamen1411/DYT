@@ -9,7 +9,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "window.h"
 #include "dyt.h"
 
 #include <stdio.h>
@@ -18,20 +17,14 @@
 
 int	main(void)
 {
-	window_t	*window;
-	char *shell_path;
+	dyt_t	*dyt;
 
-	shell_path = get_shell_path();
-	printf("%s\n", shell_path);
-	free((void *)shell_path);
-	window = window_create(1920, 1080, "title");
-	if (window == NULL)
-	{
-		dprintf(STDERR_FILENO, "Could not create window.\n");
+	dyt = dyt_create();
+	if (dyt == NULL)
 		return (1);
-	}
-	while (!window_should_close(window))
-		window_update(window);
-	window_destroy(&window);
+	printf("%s\n", dyt->shell_path);
+	while (!window_should_close(dyt->window))
+		window_update(dyt->window);
+	dyt_destroy(&dyt);
 	return (0);
 }

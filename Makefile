@@ -22,8 +22,8 @@ CFLAGS		=	-Wall -Werror -Wextra -g
 LFLAGS		=	-lglfw
 
 FILES		=	\
-	main dyt/get_shell_path window/create window/destroy	\
-	window/should_close window/update						\
+	main dyt/create dyt/destroy window/create window/destroy				\
+	window/should_close window/update										\
 
 SRCS		=	$(addprefix $(SRC_DIR)/, $(addsuffix .c,$(FILES)))
 OBJS		=	$(addprefix $(OBJ_DIR)/, $(addsuffix .o,$(FILES)))

@@ -5,7 +5,7 @@
 /*    By: Antoine Massias <massias.antoine.pro@gmail.com>                     */
 /*                                                                            */
 /*    Created: 2024/05/09 17:09:35 by Antoine Massias                         */
-/*    Updated: 2024/05/09 17:14:20 by Antoine Massias                         */
+/*    Updated: 2024/05/09 20:00:15 by Antoine Massias                         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 # include <GLFW/glfw3.h>
 # include <stdbool.h>
+
+# define WINDOW_DEFAULT_WIDTH 1920
+# define WINDOW_DEFAULT_HEIGHT 1080
+# define WINDOW_DEFAULT_TITLE "title"
 
 struct window_s
 {
